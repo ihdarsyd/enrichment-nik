@@ -1,14 +1,14 @@
 {
-    "address" : "Bumi Findaria Mas Tahap III Blok i No.5 Kec. Moncongloe Kab. Maros",
+    "national_id": "37880001",
+    "name": "Budi Santoso",
+    "date_of_birth": "1988-07-20",
+    "place_of_birth": "Jakarta",
+    "gender": "2",
+    "address": "Jl. Merdeka No. 123",
     "national_id_type" : null,
     "informant_location" : null,
-    "name" : "HENGKI ANGGARA bin MUHKATAM (alm)",
     "mothers_name" : null,
-    "national_id" : "3504130103930002",
     "police_registration_number" : null,
-    "date_of_birth" : "2001-05-28",
-    "place_of_birth" : "BELAWAE",
-    "gender" : "2",
     "profession_name" : null,
     "religion" : null,
     "citizenship" : null,
@@ -21,5 +21,5 @@
     "suspect_source_document_date" : null,
     "is_nik_structure_valid" : true,
     "status" : "PELAPOR",
-    "source": "spptti"
+    "source": "spptti" 
 }

@@ -21,15 +21,18 @@ class Validation:
     """
     def __init__(self, data):
         # convert to json
-        self.data = json.loads(data)
+        self.data = json.dumps(data)
 
     def validate_nik_spptti(self):
         # validate nik format
         nik = self.data.get('national_id')
 
         # Check if the NIK has exactly 16 digits
-        if len(nik) == 16:
-            return nik
+        if nik:
+            if len(nik) == 16:
+                return nik
+        else:
+            print('NIK not found in SPPTTI data')
         
     def validate_nik_dpo(self):
         # validate nik format
@@ -39,8 +42,11 @@ class Validation:
             nik = self.data.get('nomor_identitas')
 
             # Check if the NIK has exactly 16 digits
-            if len(nik) == 16:
-                return nik
+            if nik:
+                if len(nik) == 16:
+                    return nik
+            else:
+                print('NIK not found in DPO data')
 
 
     def validate_person(self):

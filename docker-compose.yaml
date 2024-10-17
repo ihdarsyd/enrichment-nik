@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Python Application Service
+  enrich_data_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - kafka
+    environment:
+      DUKCAPIL_URL: https://person-dukcapil.vercel.app
+      DB_HOST: 10.10.55.20
+      DB_USER: koadmin
+      DB_PASS: 59b6tjJ5X2gc
+      DB_NAME: db_training_dpo
+      DB_PORT: 5436
+      KAFKA_SERVER: kafka:19092  # Use a colon for environment variable assignments
+    networks:
+      - nifi-net
